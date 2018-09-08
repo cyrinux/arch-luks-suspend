@@ -58,6 +58,7 @@ systemctl stop systemd-udevd-kernel.socket
 systemctl stop systemd-udevd.service
 systemctl stop systemd-journald.socket
 systemctl stop systemd-journald-dev-log.socket
+systemctl stop systemd-journald-audit.socket
 systemctl stop systemd-journald.service
 
 
@@ -85,6 +86,7 @@ fi
 # Restart journald
 systemctl start systemd-journald.service
 systemctl start systemd-journald-dev-log.socket
+systemctl start systemd-journald-audit.socket
 systemctl start systemd-journald.socket
 
 # Restart udev
